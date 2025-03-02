@@ -13,28 +13,26 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('Theme App'),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
-            child: AnimatedSwitcher(
-              duration: Duration(milliseconds: 300),
-              transitionBuilder: (child, animation) {
-                return ScaleTransition(scale: animation, child: child);
+            child: Consumer<ThemeProvider>(
+              builder: (context, value, child) {
+                return IconButton(
+                  // key: ValueKey<bool>(
+                  //     themeProvider.themeMode == ThemeMode.dark),
+                  icon:
+                      value.themeMode == ThemeMode.dark
+                          ? Icon(Icons.dark_mode, size: 28)
+                          : Icon(Icons.light_mode, size: 28),
+                  onPressed: () {
+                    value.toggleTheme();
+                  },
+                );
               },
-              child: IconButton(
-                key: ValueKey<bool>(themeProvider.themeMode == ThemeMode.dark),
-                icon:
-                    themeProvider.themeMode == ThemeMode.dark
-                        ? Icon(Icons.dark_mode, size: 28)
-                        : Icon(Icons.light_mode, size: 28),
-                onPressed: () {
-                  themeProvider.toggleTheme();
-                },
-              ),
             ),
           ),
         ],
