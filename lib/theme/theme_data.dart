@@ -5,6 +5,7 @@ final ThemeData lightTheme = ThemeData(
   primaryColor: Colors.blue,
   hintColor: Colors.blueAccent,
   scaffoldBackgroundColor: Colors.white,
+  cardColor: Colors.pinkAccent.shade100,
   textTheme: TextTheme(
     displayLarge: TextStyle(
       fontSize: 24,
