@@ -38,6 +38,8 @@ class LocalizationHelper {
       'google': 'Google',
       'facebook': 'Facebook',
       'apple': 'Apple',
+      'privacy_policy': 'Privacy Policy',
+      'terms_of_service': 'Terms of Service',
     },
     'ar': {
       'hello': 'مرحبا',
@@ -79,6 +81,8 @@ class LocalizationHelper {
       'google': 'গুগল',
       'facebook': 'ফেসবুক',
       'apple': 'আপেল',
+      'privacy_policy': 'গোপনীয়তা নীতি',
+      'terms_of_service': 'সেবার শর্তাবলী',
     },
     'hi': {
       'hello': 'नमस्ते',
