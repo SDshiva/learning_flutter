@@ -6,6 +6,7 @@ final ThemeData lightTheme = ThemeData(
   hintColor: Colors.blueAccent,
   scaffoldBackgroundColor: Colors.white,
   cardColor: Colors.pinkAccent.shade100,
+  fontFamily: 'Raleway',
   textTheme: TextTheme(
     displayLarge: TextStyle(
       fontSize: 24,

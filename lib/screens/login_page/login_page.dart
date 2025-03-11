@@ -23,11 +23,13 @@ class _LoginPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       // appBar: AppBar(title: const Text('Home - Mobile')),
       body: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
+        height: height,
+        width: width,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
@@ -35,7 +37,7 @@ class _LoginPageMobile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  height: height * 0.4,
                   width: double.infinity,
                   padding: EdgeInsets.only(left: 16, right: 16),
                   decoration: BoxDecoration(
@@ -182,7 +184,7 @@ class _LoginPageMobile extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.5,
+                  height: height * 0.5,
                   child: Stack(
                     children: [
                       Align(
@@ -227,7 +229,7 @@ class _LoginPageMobile extends StatelessWidget {
                             ),
                             SizedBox(height: 25),
                             SizedBox(
-                              width: MediaQuery.of(context).size.width * .5,
+                              width: width * .5,
                               height: 60,
                               child: ElevatedButton(
                                 onPressed: () {},
@@ -318,31 +320,40 @@ class _LoginPageMobile extends StatelessWidget {
 class _LoginPageDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    // double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Left Side: Optional Promotional Content (e.g., logo, image)
             Container(
-              height: MediaQuery.of(context).size.height * 0.4,
-              width: MediaQuery.of(context).size.width * 0.4,
+              width: width * 0.3, // 30% of the screen
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 border: Border.all(color: Colors.grey, width: 1),
               ),
               child: Center(
                 child: Text(
-                  LocalizationHelper.translate(context, 'login'),
+                  LocalizationHelper.translate(
+                    context,
+                    'login',
+                  ), // Heading text for the left side
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
             ),
-            SizedBox(width: 30),
+            SizedBox(width: 40), // Space between the left and right content
             Expanded(
               child: Center(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    // Username Input
                     TextField(
                       decoration: InputDecoration(
                         labelText: LocalizationHelper.translate(
@@ -352,6 +363,7 @@ class _LoginPageDesktop extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 16),
+                    // Password Input
                     TextField(
                       decoration: InputDecoration(
                         labelText: LocalizationHelper.translate(
@@ -362,8 +374,9 @@ class _LoginPageDesktop extends StatelessWidget {
                       obscureText: true,
                     ),
                     SizedBox(height: 16),
+                    // Login Button
                     SizedBox(
-                      width: MediaQuery.of(context).size.width * .25,
+                      width: width * 0.25, // 25% width of the screen
                       height: 60,
                       child: ElevatedButton(
                         onPressed: () {},
@@ -374,6 +387,7 @@ class _LoginPageDesktop extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 40),
+                    // Create Account Text
                     Text.rich(
                       TextSpan(
                         text: LocalizationHelper.translate(context, 'new_here'),
@@ -382,7 +396,7 @@ class _LoginPageDesktop extends StatelessWidget {
                           WidgetSpan(
                             child: GestureDetector(
                               onTap: () {
-                                context.go('/register');
+                                context.push('/register');
                               },
                               child: Text(
                                 LocalizationHelper.translate(

@@ -29,7 +29,7 @@ class LocalizationHelper {
       'submit': 'Submit',
       'cancel': 'Cancel',
       'language': 'Language',
-      'create_account': 'Create Account',
+      'create_account': 'Create an Account',
       'new_here': 'New Here?',
       'or': 'Or',
       'forgot_password': 'Forgot Password?',
@@ -40,6 +40,10 @@ class LocalizationHelper {
       'apple': 'Apple',
       'privacy_policy': 'Privacy Policy',
       'terms_of_service': 'Terms of Service',
+      'create_account_msg':
+          'To create an account, provide details and verify email and set a password.',
+      'already_have_account': 'Already have an account?',
+      'continue': 'Continue',
     },
     'ar': {
       'hello': 'مرحبا',
@@ -83,6 +87,10 @@ class LocalizationHelper {
       'apple': 'আপেল',
       'privacy_policy': 'গোপনীয়তা নীতি',
       'terms_of_service': 'সেবার শর্তাবলী',
+      'create_account_msg':
+          'একটি অ্যাকাউন্ট তৈরি করতে, বিশদ প্রদান করুন এবং ইমেল যাচাই করুন এবং একটি পাসওয়ার্ড সেট করুন।',
+      'already_have_account': 'ইতিমধ্যে একটি অ্যাকাউন্ট আছে?',
+      'continue': 'চালু করুন',
     },
     'hi': {
       'hello': 'नमस्ते',
