@@ -44,6 +44,8 @@ class LocalizationHelper {
           'To create an account, provide details and verify email and set a password.',
       'already_have_account': 'Already have an account?',
       'continue': 'Continue',
+      'testing_app': 'Testing App',
+      'ongo_msg': 'Fastest for Global Security',
     },
     'ar': {
       'hello': 'مرحبا',
@@ -91,6 +93,8 @@ class LocalizationHelper {
           'একটি অ্যাকাউন্ট তৈরি করতে, বিশদ প্রদান করুন এবং ইমেল যাচাই করুন এবং একটি পাসওয়ার্ড সেট করুন।',
       'already_have_account': 'ইতিমধ্যে একটি অ্যাকাউন্ট আছে?',
       'continue': 'চালু করুন',
+      'testing_app': 'টেস্টিং অ্যাপ',
+      'ongo_msg': 'বিশ্বব্যাপী নিরাপত্তার জন্য দ্রুততম',
     },
     'hi': {
       'hello': 'नमस्ते',
